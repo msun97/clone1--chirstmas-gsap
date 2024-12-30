@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Helmet } from "react-helmet";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,7 +19,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+
+    <html lang="ko">
+      <Helmet>
+      <head prefix="og: http://ogp.me/ns# fb: http://ogpme/ns/fb# website: http://ogp.me/ns/website#">
+
+      </head>
+      </Helmet>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
